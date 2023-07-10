@@ -15,3 +15,6 @@ def calculateFunction(request):
     b = 4
     c = a+b
     return HttpResponse(f'The result is {c}. do again')
+
+def index(req):
+    return render(req, 'index.html')

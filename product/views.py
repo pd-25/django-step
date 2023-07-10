@@ -4,3 +4,6 @@ from django.http import HttpResponse
 
 def date(reqest):
     return HttpResponse('this is product date function')
+
+def productFunction(request):
+    return render(request, 'products/index.html')

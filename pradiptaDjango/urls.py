@@ -16,15 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls.conf import include, include
 from paymrnts import views
-from product import views as product
-from review import views as review
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.firstFunction),
-    path('payment', views.paymentFunction),
-    path('calculate', views.calculateFunction),
-    path('date', product.date),
-    path('review', review.review),
+    path('', views.index),
+    path('payments/', include('paymrnts.paymentUrl')),
+    path('products/', include('product.productsUrl')),
+    path('review/', include('review.reviewUrl'))
 ]
