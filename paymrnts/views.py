@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http.response import HttpResponse
 
 # Create your views here.
-def firstFunction(request):
+def index(request):
     return HttpResponse ('Pradipta first Django')
 
 
@@ -16,5 +16,5 @@ def calculateFunction(request):
     c = a+b
     return HttpResponse(f'The result is {c}. do again')
 
-def index(req):
-    return render(req, 'index.html')
+def firstFunction(req):
+    return render(req, 'payment/index.html')
